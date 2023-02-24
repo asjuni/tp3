@@ -3,10 +3,10 @@ public class Knight extends Piece {
         super(position, color);
     }
 
-    @Override
     public boolean isValidMove(Position newPosition , Cell[][] board) {
-        int x = Math.abs(newPosition.getX() - this.position.getX());
-        int y = Math.abs(newPosition.getY() - this.position.getY());
-        return (x == 0 && y == 1) || (x == 1 && y == 1);
+        return false;
+    }
+    public String toString(){
+        return"Kn";
     }
 }
