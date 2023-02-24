@@ -1,33 +1,36 @@
 public class Cell {
-    private Position position;
+
+    private final Position position;
     private boolean isEmpty;
-    private Piece piece;
+    private final Piece piece;
 
-    public Cell(Position position, boolean isEmpty , Piece piece) {
+    public Cell(Position position, Piece piece) {
         this.position = position;
-        this.isEmpty = isEmpty;
         this.piece = piece;
+        this.isEmpty = false;
     }
 
-    public final Position getPosition() {
+    public Position getPosition() {
         return position;
-    }    public void setPosition(Position position) {
-        this.position = position;
     }
 
-    public boolean getisEmpty() {
-        return this.value == null;
+    public boolean isEmpty() {
+        return isEmpty;
     }
 
-    public void setisEmpty(int Empty) {
-        this.Empty = Empty;
+    public void setIsEmpty(boolean isEmpty) {
+        this.isEmpty = isEmpty;
     }
 
     public Piece getPiece() {
         return piece;
     }
 
-    public void setPiece(Piece piece) {
-        this.piece = piece;
-    }
 }
+/*
+Non, nous n'avons pas besoin de créer six attributs. Au lieu de cela,
+ nous pouvons créer un attribut appelé "piece" qui est de type Piece.
+  Cet attribut peut être déclaré comme final et peut être utilisé pour stocker
+  la pièce qui se trouve sur la cellule. Nous pouvons résoudre le problème en utilisant
+   un objet Piece pour stocker la pièce.
+ */
